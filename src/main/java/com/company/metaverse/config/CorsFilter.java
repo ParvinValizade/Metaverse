@@ -19,8 +19,7 @@ public class CorsFilter implements Filter {
         httpServletResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         httpServletResponse.setHeader("Access-Control-Max-Age", "3600");
         httpServletResponse.setHeader("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
-        httpServletResponse.addHeader("Access-Control-Expose-Headers", "xsrf-token");
-        httpServletResponse.addHeader("Access-Control-Expose-Headers", "http://localhost:3000");
+        httpServletResponse.addHeader("Access-Control-Allow-Headers", "http://localhost:3000");
 
         chain.doFilter(request, response);
     }
